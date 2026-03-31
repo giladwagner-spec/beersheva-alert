@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/:path*" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+    }
+  ]
+}

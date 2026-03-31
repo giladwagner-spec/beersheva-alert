@@ -1,0 +1,52 @@
+# 🚨 צבע אדום – באר שבע
+
+שעון עצר שמציג את הזמן שחלף מאז האזעקה האחרונה בבאר שבע.
+עובד כ-PWA — ניתן להוסיף למסך הבית כמו אפליקציה.
+
+---
+
+## פריסה ב-Vercel (חינמי, 5 דקות)
+
+### שלב 1 — העלה את הקבצים ל-GitHub
+
+1. כנס ל-[github.com](https://github.com) והרשם / התחבר
+2. לחץ **"New repository"**
+3. תן שם: `beersheva-alert`
+4. לחץ **"Create repository"**
+5. גרור את כל הקבצים לדף ה-GitHub שנפתח (Drag & Drop)
+6. לחץ **"Commit changes"**
+
+### שלב 2 — פרוס ב-Vercel
+
+1. כנס ל-[vercel.com](https://vercel.com) ולחץ **"Sign up with GitHub"**
+2. לחץ **"Add New Project"**
+3. בחר את ה-repository `beersheva-alert`
+4. לחץ **"Deploy"** — זהו!
+
+תוך כ-30 שניות תקבל קישור כמו: `https://beersheva-alert.vercel.app`
+
+### שלב 3 — התקנה על הנייד
+
+**iPhone (Safari):**
+- פתח את הקישור בSafari
+- לחץ על כפתור השיתוף (□↑)
+- בחר "הוסף למסך הבית"
+
+**Android (Chrome):**
+- פתח את הקישור בChrome
+- תופיע הודעה "הוסף למסך הבית" אוטומטית
+
+---
+
+## מבנה הפרויקט
+
+```
+beersheva-alert/
+├── api/
+│   └── last-alert.js     ← Serverless function (proxy לפיקוד העורף)
+├── public/
+│   ├── index.html        ← הדף הראשי
+│   ├── manifest.json     ← הגדרות PWA
+│   └── sw.js             ← Service Worker
+└── vercel.json           ← הגדרות Vercel
+```
